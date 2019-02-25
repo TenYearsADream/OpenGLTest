@@ -20,14 +20,14 @@ namespace OpenGLTest
         //float _materialShininess = 51.4f;
         float _materialShininess = 128f;
 
-        public MyLight()
+        public MyLight() : base(1000, 800, GraphicsMode.Default, "MyLight", GameWindowFlags.FixedWindow)
         {
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            GL.ClearColor(Color.Black);
+            GL.ClearColor(Color4.Black);
             GL.Enable(EnableCap.DepthTest);
             GL.Enable(EnableCap.CullFace);
             GL.CullFace(CullFaceMode.Back);
